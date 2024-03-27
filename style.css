@@ -1,0 +1,441 @@
+:root {
+	--backgroundColor: #fef5ee;
+	--primaryColor: #f27638;
+	--fontColor: #400f0a;
+	--buttonHover: #e04316;
+}
+* {
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+}
+body {
+	background-color: var(--backgroundColor);
+	position: relative;
+}
+/* *************************************************** */
+/* HEADER*/
+header {
+	padding: 0 24.8rem;
+	display: flex;
+	height: 8rem;
+	background-color: var(--primaryColor);
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+header figure {
+	width: 6rem;
+}
+header img {
+	object-fit: contain;
+	width: 100%;
+}
+nav {
+	height: 100%;
+}
+nav ul {
+	display: flex;
+	height: 100%;
+	gap: 6rem;
+	list-style: none;
+	align-items: stretch;
+}
+
+nav li {
+	display: inline;
+	align-items: center;
+}
+nav li a {
+	display: flex;
+	text-decoration: none;
+	align-items: center;
+	height: 100%;
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: var(--fontColor);
+}
+nav li .arrow::after {
+	content: url("./assets/Images/Vector.svg");
+	display: inline-block; /* Ensures the icon is treated as an inline block */
+	margin-left: 5px; /* Adjust the margin as needed */
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: var(--primaryColor);
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.dropdown-content a {
+	padding: 1.3rem;
+}
+nav ul li:hover .dropdown-content {
+	display: block;
+}
+
+nav li:hover .nav-link,
+nav .dropdown-link-first:hover,
+nav .dropdown-link-second:hover {
+	text-decoration: underline;
+}
+/* ******************************************************************************************************************/
+/* MAIN */
+main {
+	margin: 0 24.8rem;
+	/* height: 100rem; */
+}
+/* ******************************************************************************************************************/
+/* Hero */
+.hero {
+	display: flex;
+	margin-top: 8rem;
+	margin-bottom: 8rem;
+	gap: 5rem;
+}
+.hero-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 4rem;
+}
+.hero div,
+.hero figure {
+	width: 50%;
+}
+.hero figure {
+	text-align: center;
+}
+.hero img {
+	height: 100%;
+}
+h1 {
+	font-size: 6rem;
+	font-weight: bolder;
+	color: var(--fontColor);
+}
+.hero p {
+	color: var(--fontColor);
+	font-size: 2.4rem;
+}
+.hero a {
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 2.4rem;
+	padding: 1.6rem;
+	background-color: var(--primaryColor);
+	color: var(--fontColor);
+	border-radius: 1.2rem;
+	align-self: start;
+	transition: 0.3s;
+}
+.hero a:hover {
+	background-color: var(--buttonHover);
+	transition: 0.3s;
+}
+/* ******************************************************************************************************************
+/* Featured */
+.feature {
+	position: relative;
+	z-index: 1;
+}
+.feature p,
+.intro p {
+	color: var(--fontColor);
+	font-size: 1.8rem;
+	line-height: 160%;
+}
+.feature-list {
+	margin-top: 4rem;
+	display: flex;
+	gap: 4.8rem;
+}
+.section-name {
+	text-align: center;
+	margin-bottom: 2.4rem;
+}
+.feature-list-item {
+	padding: 2.4rem;
+	margin-bottom: 6.4rem;
+	gap: 30rem;
+	border-radius: 24px;
+	background: #fef5ee;
+	/* box-shadow: 6px 6px 12px #d8d0ca, -6px -6px 12px #ffffff; */
+	box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
+.feature-list-item .section-name p a {
+	color: var(--fontColor);
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+.feature-icon {
+	width: 4rem;
+	height: 4rem;
+	margin-bottom: 1rem;
+	background-size: cover;
+	background-position: center;
+	display: inline-block;
+}
+.kitchen-icon {
+	background-image: url("./assets/Images/tools-kitchen.svg");
+}
+.heart-icon {
+	background-image: url("./assets/Images/heart.svg");
+}
+.coin-icon {
+	background-image: url("./assets/Images/coin.svg");
+}
+.notes-icon {
+	background-image: url("./assets/Images/notes.svg");
+}
+.feature-list-item:hover {
+	transform: translateY(-0.5rem);
+	cursor: pointer;
+}
+.feature-list-item:hover .main-link {
+	color: var(--primaryColor);
+}
+/* ****************************************************************************************************************** */
+/* Post section */
+.section {
+	display: flex;
+	margin-top: 4rem;
+	gap: 10rem;
+}
+
+.section-post {
+	width: 65%;
+}
+.section-img {
+	width: 35%;
+	/* text-align: left; */
+	display: flex;
+}
+.section-post {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 4rem;
+}
+.section-img img {
+	width: 100%;
+	object-fit: contain;
+}
+h2 {
+	font-size: 4.8rem;
+	color: var(--fontColor);
+	margin-bottom: 4rem;
+}
+h3 {
+	font-size: 3.2rem;
+	color: var(--fontColor);
+}
+.articles li,
+.section-post li,
+.section-post p {
+	color: var(--fontColor);
+	font-size: 1.8rem;
+	line-height: 160%;
+}
+.articles ol,
+.section-post ul {
+	margin-left: 2rem;
+}
+.articles ol {
+	margin-bottom: 4rem;
+}
+.section-width-modifier {
+	width: 100rem;
+	margin: 4rem auto;
+}
+
+/* ************************************************************************** */
+/* Button */
+.section-post a {
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 1.8rem;
+	padding: 1.2rem;
+	background-color: var(--primaryColor);
+	color: var(--fontColor);
+	border-radius: 1.2rem;
+	align-self: start;
+	transition: 0.3s;
+}
+.section-post a:hover {
+	background-color: var(--buttonHover);
+	transition: 0.3s;
+}
+/* ****************************************************************************************************************** */
+/* Post section */
+.super-food {
+	margin-top: 8rem;
+}
+/* ****************************************************************************************************************** */
+/* Testimonial */
+.testimonial {
+	margin-top: 16rem;
+	text-align: center;
+}
+.testimonials {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 4rem;
+}
+.testimonial-person img {
+	height: 10rem;
+	margin-bottom: 2rem;
+	border-radius: 50%;
+	background: #fef5ee;
+	box-shadow: 20px 20px 60px #d8d0ca, -20px -20px 60px #ffffff;
+}
+.testimonial-person p {
+	font-size: 1.6rem;
+	line-height: 120%;
+	max-width: 20rem;
+	font-style: italic;
+}
+/* ****************************************************************************************************************** */
+/* Footer */
+footer {
+	background-color: var(--fontColor);
+	color: var(--backgroundColor);
+	padding: 4rem 24.8rem;
+	display: flex;
+	margin-top: 16rem;
+}
+footer .footer-img {
+	display: block;
+	height: 8rem;
+}
+footer .column {
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+footer .column {
+	align-items: center;
+}
+
+footer a img {
+	object-fit: contain;
+	/* max-width: 100%; */
+	height: 100%;
+}
+footer .column p {
+	color: var(--backgroundColor);
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 700;
+}
+footer .column a {
+	color: var(--backgroundColor);
+	font-size: 1.6rem;
+	font-style: normal;
+	font-weight: 300;
+}
+footer .instagram::after {
+	content: url("./assets/Images/instagram.svg");
+	display: inline-block; /* Ensures the icon is treated as an inline block */
+	margin-left: 5px; /* Adjust the margin as needed */
+}
+footer .facebook::after {
+	content: url("./assets/Images/facebook.svg");
+	display: inline-block; /* Ensures the icon is treated as an inline block */
+	margin-left: 5px; /* Adjust the margin as needed */
+}
+footer .tiktok::after {
+	content: url("./assets/Images/tiktok.svg");
+	display: inline-block; /* Ensures the icon is treated as an inline block */
+	margin-left: 5px; /* Adjust the margin as needed */
+}
+footer .linkedin::after {
+	content: url("./assets/Images/linkedin.svg");
+	display: inline-block; /* Ensures the icon is treated as an inline block */
+	margin-left: 5px; /* Adjust the margin as needed */
+}
+footer .github::after {
+	content: url("./assets/Images/github.svg");
+	display: inline-block; /* Ensures the icon is treated as an inline block */
+	margin-left: 5px; /* Adjust the margin as needed */
+}
+/* **************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** */
+/* INTRO */
+.intro {
+	margin-top: 8rem;
+}
+.intro h1 {
+	margin-bottom: 4rem;
+}
+/* INTRO */
+.section-modifier {
+	height: 30rem;
+}
+.section-img-modifier img {
+	height: 100%;
+	width: auto;
+}
+/* ************************************************************************************************************************************************************************** */
+/* SECTION-2 */
+.articles {
+	margin-top: 8rem;
+}
+.articles p {
+	color: var(--fontColor);
+	font-size: 1.8rem;
+	line-height: 160%;
+}
+.articles p:first-child {
+	margin-top: 4rem;
+}
+.section-2 {
+	margin-top: 4rem;
+}
+.section-2-post p {
+	margin-top: 4rem;
+}
+.section-2-img {
+	margin-top: 4rem;
+	text-align: center;
+	height: 30rem;
+}
+.section-2-img img {
+	height: 100%;
+}
+/* ************************************************************************************************************************************************************************** */
+.recipe-3-row {
+	margin-top: 4rem;
+	display: flex;
+	justify-content: space-between;
+	gap: 8rem;
+}
+/* .recipe-3-row .row-element {
+	/* height: 40rem; 
+} */
+.recipe-3-row .row-element figure {
+	width: 100%;
+}
+.recipe-3-row .row-element img {
+	width: 100%;
+}
+.row-element {
+	text-align: center;
+}
+.row-element p {
+	margin-top: 4rem;
+}
+.row-element a {
+	color: var(--fontColor);
+	font-size: 2.4rem;
+	font-weight: 600;
+}
+.row-element:hover {
+	cursor: pointer;
+}
+.row-element:hover .main-link {
+	color: var(--primaryColor);
+}
